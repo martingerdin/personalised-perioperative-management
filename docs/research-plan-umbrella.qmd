@@ -16,7 +16,7 @@ Stub. This will be the stable SPIROS-aligned protocol annexed to the Ethix Grund
 
 # Intent
 
-I will keep this plan broad enough that ordinary engineering iteration does not force an ethics amendment. Detail belongs in `research-plan-engineering.qmd`.
+I will keep this plan broad enough that ordinary method iteration does not force an ethics amendment. Detail belongs in `research-plan-detailed.qmd`.
 
 # Placeholder sections
 

@@ -1,5 +1,5 @@
 ---
-title: "Engineering research plan (internal)"
+title: "Detailed research plan (internal)"
 author: "Research team"
 date: today
 format:
@@ -12,11 +12,11 @@ bibliography: ../references/project.bib
 
 # Status
 
-Stub. This is the living plan that guides implementation. It must stay inside the umbrella ethics plan.
+Stub. This is the living plan that guides day-to-day research work. It must stay inside the umbrella ethics plan.
 
 # Intent
 
-I will use this document to steer agents and humans day to day: architecture, models, evals, prompts, milestones, and risks.
+I will use this document to steer concrete work: methods, architecture, models, evals, prompts, milestones, and risks.
 
 # Placeholder sections
 
@@ -27,5 +27,5 @@ I will use this document to steer agents and humans day to day: architecture, mo
 5. Evaluation harness
 6. Safety and red-team tests
 7. Reproducibility and prompt registry
-8. Traceability matrix: engineering task → umbrella aim
+8. Traceability matrix: detailed task → umbrella aim
 9. Open questions and decision log

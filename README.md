@@ -8,17 +8,17 @@ Deliverables:
 
 1. Short literature review
 2. Umbrella research plan for Ethix (stable, broad)
-3. Engineering research plan (detailed, living)
+3. Detailed research plan (specific, living)
 4. Ethics application draft for Etikprövningsmyndigheten / Ethix
 5. Shared BibTeX bibliography
 6. AI-writing attribution ledger with running totals
 
 Supporting paths:
 
-- `docs/dual-research-plans.md` — why two plans exist
+- `docs/two-research-plans.md` — why two plans exist
 - `docs/ai-transparency.md` — how AI % is logged
 - `docs/research-plan-umbrella.qmd` — ethics-facing protocol stub
-- `docs/research-plan-engineering.qmd` — internal work-plan stub
+- `docs/research-plan-detailed.qmd` — internal detailed work-plan stub
 - `references/project.bib` — shared bibliography
 - `checklists/` — SPIROS and SPIRIT stubs
 - `meta/ai-attribution-*.csv|md` — AI share ledger and summary

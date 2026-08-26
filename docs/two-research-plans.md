@@ -1,19 +1,19 @@
-# Dual research plans
+# Two research plans
 
 This project keeps **two** research plans on purpose.
 
 | Document | Audience | Stability | File |
 |----------|----------|-----------|------|
 | Umbrella research plan | Etikprövningsmyndigheten / Ethix | Broad and stable; change only with ethics amendment | `docs/research-plan-umbrella.qmd` |
-| Engineering research plan | Project team | Detailed and living; update as methods mature | `docs/research-plan-engineering.qmd` |
+| Detailed research plan | Project team | Specific and living; update as methods mature | `docs/research-plan-detailed.qmd` |
 
 ## Why two plans
 
-Ethics review is slow to amend. Day-to-day engineering work will change prompts, model choices, evaluation metrics, and code paths. I will put the wide, ethically relevant frame in the umbrella plan. I will put operational detail in the engineering plan.
+Ethics review is slow to amend. Day-to-day research work will change prompts, model choices, evaluation metrics, and analysis paths. I will put the wide, ethically relevant frame in the umbrella plan. I will put operational detail in the detailed plan.
 
 ## Boundary rule
 
-The engineering plan must stay **inside** the umbrella plan.
+The detailed plan must stay **inside** the umbrella plan.
 
 Allowed without ethics amendment (examples):
 
@@ -44,7 +44,7 @@ Keep it general but not vague:
 
 Avoid locking: exact model names, prompt text, sprint schedules, package versions, dashboard layouts.
 
-## Engineering plan content (internal)
+## Detailed plan content (internal)
 
 1. Concrete workstreams and milestones
 2. System architecture (agents, tools, retrieval, audit logs)
