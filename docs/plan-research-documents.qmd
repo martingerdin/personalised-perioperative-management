@@ -1,0 +1,302 @@
+---
+title: "Plan: literature review, research plan, ethics application, bibliography"
+author: "Research team"
+date: today
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+  pdf:
+    toc: true
+    number-sections: true
+bibliography: ../references/project.bib
+csl: https://www.zotero.org/styles/vancouver
+---
+
+# Purpose
+
+I will produce four short, linked documents for this project on AI-assisted personalised perioperative management:
+
+1. A short literature review
+2. A research plan / protocol
+3. An ethics application pack
+4. A maintained bibliography
+
+I will write in first person. I will use short, direct sentences. I will avoid filler, hype, and vague AI language.
+
+# Study framing first
+
+Before drafting, I will decide the primary design. That choice sets the reporting guideline.
+
+| Design | Guideline | Use in this project |
+|--------|-----------|---------------------|
+| Observational (cohort, case-control, cross-sectional), including chart review and association studies | **SPIROS** | Likely primary path: chart review, fitness assessment from records, associations between patient variables and outcomes |
+| Interventional / randomised trial of an AI-supported pathway | **SPIRIT 2025** | Use if we test an agent-supported management pathway against usual care |
+
+I expect a mixed programme:
+
+- An observational protocol under SPIROS for retrospective or prospective chart-based work
+- A separate interventional protocol under SPIRIT if we later test agent-supported plans in practice
+
+I will not force one checklist onto both designs.
+
+# Deliverables
+
+## 1. Short literature review
+
+**File:** `docs/literature-review.qmd`  
+**Length target:** 1,500–2,500 words  
+**Output:** HTML and PDF via Quarto
+
+### Scope questions
+
+I will answer only these questions:
+
+1. What is known about preoperative risk assessment and personalised perioperative planning?
+2. Where do chart review and structured clinical data already support fitness-for-anaesthesia decisions?
+3. What evidence exists for LLM or agent systems in clinical documentation, triage, or care planning?
+4. What safety, bias, privacy, and accountability gaps remain for perioperative use?
+5. What gap does this project address?
+
+### Structure
+
+1. Background and clinical problem
+2. Current perioperative assessment practice
+3. Data-driven personalisation
+4. AI agents and open-weight models in clinical workflows
+5. Risks, governance, and evidence gaps
+6. Implications for this study
+7. References
+
+### Method for the review
+
+1. Define inclusion criteria (perioperative OR anaesthesia; personalisation OR risk prediction; LLM OR clinical decision support).
+2. Search PubMed, Scopus, and grey sources (guidelines, HTA, regulator notes).
+3. Export citations to BibTeX (`references/project.bib`).
+4. Screen titles and abstracts in a simple R or Python table.
+5. Extract: design, population, intervention/exposure, outcomes, limitations.
+6. Synthesise by theme, not by paper dump.
+7. Mark confidence: strong evidence, limited evidence, speculation.
+
+### Tool use
+
+- **BibTeX** for all citations
+- **R or Python** for screening logs and simple evidence tables
+- **OpenRouter / open-weight LLM** only for: search-string drafts, clustering themes, spotting missing sections
+- Human review for every claim tied to a citation
+
+I will not let a model invent references. Every citation must exist in `project.bib` and be checked.
+
+## 2. Research plan / protocol
+
+**File:** `docs/research-plan.qmd`  
+**Companion checklists:** `checklists/spiros-checklist.md`, `checklists/spirit-2025-checklist.md` (if interventional)
+
+### Core research aims (draft)
+
+1. Assess whether an AI agent can extract and structure preoperative fitness signals from medical charts.
+2. Draft personalised perioperative management suggestions from those signals.
+3. Study associations between patient-level variables and perioperative outcomes.
+4. Define human oversight, error modes, and escalation rules before any clinical use.
+
+### SPIROS map (observational track)
+
+I will cover the six SPIROS domains:
+
+1. **General information** — title, registration, protocol version, roles
+2. **Introduction** — rationale, objectives, hypotheses
+3. **Methods** — design, setting, participants, variables, data sources, bias, sample size, analysis
+4. **Ethical considerations** — consent model, privacy, harms, data governance
+5. **Reporting and dissemination** — outputs, authorship, open materials
+6. **Other** — AI-assisted writing disclosure, funding, conflicts, amendments
+
+I will state explicitly when an item does not apply.
+
+### SPIRIT map (interventional track, if used)
+
+If we test an agent-supported pathway, I will add SPIRIT 2025 items that SPIROS does not cover well:
+
+- Intervention and comparator description
+- Randomisation and blinding (or justification for open label)
+- Schedule of enrolment, interventions, and assessments
+- Harms surveillance for the digital intervention
+- Patient and public involvement
+- Open science section (data, code, materials)
+
+### Analysis and reproducibility
+
+- Pre-specify primary and secondary endpoints
+- Separate derivation and evaluation where models are involved
+- Store analysis code in `scripts/`
+- Freeze a statistical analysis plan before outcome analysis
+- Record model names, versions, prompts, temperature, and retrieval settings
+
+## 3. Ethics application
+
+**File:** `docs/ethics-application.qmd`  
+**Annexes:** consent templates, data flow diagram, risk register
+
+### Content blocks
+
+1. Lay summary
+2. Scientific background (short; cite the literature review)
+3. Aims and design
+4. Participants and data sources
+5. Recruitment or record access pathway
+6. Consent, waiver, or opt-out rationale
+7. Data minimisation and de-identification
+8. Model and vendor risk (OpenRouter, local open-weight models, logs, retention)
+9. Clinical safety: no autonomous decisions; clinician remains accountable
+10. Bias, equity, and failure modes
+11. Incident reporting
+12. Benefit–risk balance
+13. Dissemination and data sharing limits
+
+### AI-specific ethics points I will address
+
+- Charts may contain identifiers; prompts must not leave approved environments unless approved
+- Prefer local or controlled open-weight inference for identifiable text where feasible
+- If OpenRouter or similar APIs are used, document subprocessors, retention, and contractual controls
+- Store prompts and outputs only as allowed by the REC/IRB and data controller
+- Prohibit clinical deployment until evaluation and governance gates are met
+
+### Alignment
+
+Ethics text will reuse the same objectives, population, and analysis plan as the research plan. I will not maintain divergent versions.
+
+## 4. Bibliography
+
+**File:** `references/project.bib`  
+**Review helper:** `scripts/bibliography_check.py` or `.R`
+
+### Rules
+
+- One shared BibTeX file for all Quarto docs
+- Stable keys: `FirstAuthorYearShortTitle`
+- Prefer DOIs
+- Include SPIRIT 2025, SPIROS materials, STROBE/CONSORT as relevant, and core perioperative and AI-safety sources
+- Tag entries with keywords: `perioperative`, `llm`, `ethics`, `methods`
+
+### Maintenance
+
+1. Add sources during screening
+2. Deduplicate
+3. Verify DOIs and titles
+4. Render Quarto and fix missing citations
+5. Export a plain reference list for the ethics pack if required
+
+# Tooling workflow
+
+```mermaid
+flowchart TD
+  A[Research questions] --> B[Search and screen]
+  B --> C[project.bib]
+  C --> D[Literature review Quarto]
+  A --> E[Design choice SPIROS or SPIRIT]
+  E --> F[Research plan Quarto]
+  D --> F
+  F --> G[Ethics application Quarto]
+  C --> G
+  F --> H[Checklists and SAP]
+  D --> I[HTML PDF outputs]
+  F --> I
+  G --> I
+  J[R or Python scripts] --> B
+  J --> H
+  K[OpenRouter or open-weight LLM] --> L[Draft assist only]
+  L --> D
+  L --> F
+  L --> G
+```
+
+## Quarto
+
+- One project (`_quarto.yml`) with shared bibliography and styles
+- Separate `.qmd` files for review, plan, and ethics
+- Cross-references between documents
+- Render to HTML for editing and PDF for submission
+
+## BibTeX
+
+- Single source of truth in `references/project.bib`
+- Cite with `@key` in Quarto
+- Keep checklist citations in the same file
+
+## R / Python
+
+Use scripts for:
+
+- Search string logs
+- Screening decisions
+- Evidence tables
+- Simple sample-size or precision calculations
+- Bibliography validation (missing DOI, empty year, duplicate titles)
+
+Do not use notebooks as the only record. Keep runnable scripts in `scripts/`.
+
+## OpenRouter and open-weight LLMs
+
+Allowed assistive uses:
+
+- Outline critique against SPIROS/SPIRIT checklists
+- Plain-language rewrite of my drafts (I keep final wording)
+- Red-team prompts for ethics risks
+- Clustering themes from screened abstracts I supply
+
+Disallowed:
+
+- Fabricating papers or quotations
+- Silent rewriting that adds claims without sources
+- Sending identifiable patient data to external APIs without approval
+
+I will disclose AI assistance in the protocol (SPIROS item on AI-assisted technology).
+
+# Writing rules for all documents
+
+1. First person where I state plans and judgements
+2. Short sentences
+3. Concrete verbs
+4. Define acronyms once
+5. No marketing tone around AI
+6. Prefer “I will measure X” over “this cutting-edge system will revolutionise Y”
+7. Separate evidence, plan, and speculation
+
+# Work sequence
+
+| Step | Task | Output |
+|------|------|--------|
+| 0 | Confirm primary design (observational vs interventional) and data access route | One-page design note |
+| 1 | Set up Quarto project, BibTeX, folders, checklist stubs | Repo scaffold |
+| 2 | Build search strategy and seed bibliography | `project.bib` v0.1 |
+| 3 | Screen and theme the evidence | Screening table + theme notes |
+| 4 | Draft short literature review | `literature-review.qmd` |
+| 5 | Draft research plan mapped to SPIROS (and SPIRIT if needed) | `research-plan.qmd` + checklists |
+| 6 | Draft ethics application from the locked plan | `ethics-application.qmd` + annex list |
+| 7 | Internal consistency pass across all four products | Issue list closed |
+| 8 | External review (clinical, methods, privacy) | Revised PDFs |
+| 9 | Submit ethics; register protocol if required | Submission pack |
+
+# Acceptance criteria
+
+I will treat the package as ready when:
+
+- The literature review answers the five scope questions and cites only verified BibTeX entries
+- The research plan completes the chosen checklist (SPIROS and/or SPIRIT), with explicit N/A notes
+- The ethics application matches the plan on aims, data, consent, and AI processing
+- All Quarto documents render cleanly with one bibliography
+- AI use is disclosed, and no identifiable patient text has been sent to unapproved services
+
+# Immediate next actions
+
+1. Write a one-page design note: population, data source, observational vs interventional, primary outcome
+2. Scaffold `_quarto.yml`, empty `.qmd` stubs, and `project.bib` with methods guidelines
+3. Draft search strings for perioperative assessment and clinical LLM/agent evidence
+4. Complete SPIROS checklist stub against the intended observational protocol
+
+# Key references to seed early
+
+- SPIRIT 2025 statement and explanation & elaboration
+- SPIROS checklist and explanation materials (Maastricht / EQUATOR-linked resources)
+- STROBE for later results reporting of observational analyses
+- Local institutional REC/IRB guidance and national health-data rules relevant to chart review
