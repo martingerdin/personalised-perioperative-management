@@ -4,13 +4,13 @@ Per-commit AI-written share for this repository.
 
 ## Totals
 
-- Commits scanned: **4**
-- Commits with AI %: **4**
+- Commits scanned: **5**
+- Commits with AI %: **5**
 - Commits missing AI %: **0**
-- Lines added (weighted base): **527**
-- Weighted AI-written share: **94.8%**
-- Weighted human-written share: **5.2%**
-- Unweighted mean AI %: **71.2%**
+- Lines added (weighted base): **1175**
+- Weighted AI-written share: **94.9%**
+- Weighted human-written share: **5.1%**
+- Unweighted mean AI %: **76.0%**
 
 Weighted share = sum(ai_pct × lines_added) / sum(lines_added).
 
@@ -28,4 +28,5 @@ Weighted share = sum(ai_pct × lines_added) / sum(lines_added).
 | `f7fd4c8` | 2026-08-26 | 95 | 488 | override | Add plan for literature review, research plan, ethics, and bibliography |
 | `dae2a25` | 2026-08-26 | 95 | 31 | override | Note Ethix has no submission API; ethics draft needs a field template |
 | `960eeeb` | 2026-08-26 | 95 | 7 | override | Add Ethix field-list next step and acceptance criteria |
+| `90b24b1` | 2026-08-26 | 95 | 648 | trailer | Split ethics umbrella and engineering plans; add AI attribution ledger |
 
