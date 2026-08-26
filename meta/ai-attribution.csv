@@ -1,0 +1,5 @@
+commit,date,subject,ai_pct,lines_added,lines_deleted,source,notes
+cafb674b289477378665805491168b242c0c927b,2026-08-25,"Initial commit, add README",0,1,0,override,Human-authored initial README
+f7fd4c84f7169ec93a76716dade168935ea35b7d,2026-08-26,"Add plan for literature review, research plan, ethics, and bibliography",95,488,0,override,Cloud agent drafted plan scaffold from human brief; human set goals
+dae2a25a87ab9a91326e1b4253d1233b38d10567,2026-08-26,Note Ethix has no submission API; ethics draft needs a field template,95,31,7,override,Cloud agent Ethix API research and plan update from human question
+960eeebd4eb636bb0319d611b697ee1abbe9b752,2026-08-26,Add Ethix field-list next step and acceptance criteria,95,7,4,override,Cloud agent acceptance-criteria edit from human Ethix follow-up

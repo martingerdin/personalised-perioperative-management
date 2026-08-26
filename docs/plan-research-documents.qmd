@@ -16,12 +16,14 @@ csl: https://www.zotero.org/styles/vancouver
 
 # Purpose
 
-I will produce four short, linked documents for this project on AI-assisted personalised perioperative management:
+I will produce linked documents for this project on AI-assisted personalised perioperative management:
 
 1. A short literature review
-2. A research plan / protocol
-3. An ethics application pack
-4. A maintained bibliography
+2. An **umbrella** research plan for ethics (stable, broad)
+3. An **engineering** research plan for day-to-day work (detailed, living)
+4. An ethics application pack for Etikprövningsmyndigheten / Ethix
+5. A maintained bibliography
+6. A public AI-writing attribution ledger with running totals
 
 I will write in first person. I will use short, direct sentences. I will avoid filler, hype, and vague AI language.
 
@@ -88,34 +90,54 @@ I will answer only these questions:
 
 I will not let a model invent references. Every citation must exist in `project.bib` and be checked.
 
-## 2. Research plan / protocol
+## 2. Two research plans
 
-**File:** `docs/research-plan.qmd`  
+See also `docs/dual-research-plans.md`.
+
+| Plan | File | Role |
+|------|------|------|
+| Umbrella (ethics) | `docs/research-plan-umbrella.qmd` | Annex to Ethix; SPIROS map; broad bounds |
+| Engineering (internal) | `docs/research-plan-engineering.qmd` | Guides implementation; may change often |
+
 **Companion checklists:** `checklists/spiros-checklist.md`, `checklists/spirit-2025-checklist.md` (if interventional)
 
-### Core research aims (draft)
+### Core research aims (draft, shared)
 
 1. Assess whether an AI agent can extract and structure preoperative fitness signals from medical charts.
 2. Draft personalised perioperative management suggestions from those signals.
 3. Study associations between patient-level variables and perioperative outcomes.
 4. Define human oversight, error modes, and escalation rules before any clinical use.
 
-### SPIROS map (observational track)
+### Umbrella plan rules
 
-I will cover the six SPIROS domains:
+I will write the ethics plan so ordinary method tweaks do not need an ändringsansökan.
+
+Include: aims, design family, population/setting bounds, data categories, processing principles, oversight, risk classes, dissemination.
+
+Avoid locking: exact models, prompts, library versions, sprint boards, dashboard wireframes.
+
+State contingent future interventional work under SPIRIT only as a possibility, not as an unapproved commitment to start.
+
+### Engineering plan rules
+
+I will keep operational detail here. Every major workstream must map to an umbrella aim. If a change leaves the umbrella bounds, I stop and prepare an Ethix amendment first.
+
+### SPIROS map (observational track — umbrella)
+
+I will cover the six SPIROS domains in the umbrella plan:
 
 1. **General information** — title, registration, protocol version, roles
 2. **Introduction** — rationale, objectives, hypotheses
 3. **Methods** — design, setting, participants, variables, data sources, bias, sample size, analysis
 4. **Ethical considerations** — consent model, privacy, harms, data governance
-5. **Reporting and dissemination** — outputs, authorship, open materials
+5. **Reporting and dissemination** — outputs, authorship, open materials, AI-writing ledger
 6. **Other** — AI-assisted writing disclosure, funding, conflicts, amendments
 
 I will state explicitly when an item does not apply.
 
 ### SPIRIT map (interventional track, if used)
 
-If we test an agent-supported pathway, I will add SPIRIT 2025 items that SPIROS does not cover well:
+If we later test an agent-supported pathway, I will add a separate SPIRIT 2025 protocol rather than overloading the observational umbrella:
 
 - Intervention and comparator description
 - Randomisation and blinding (or justification for open label)
@@ -126,11 +148,12 @@ If we test an agent-supported pathway, I will add SPIRIT 2025 items that SPIROS 
 
 ### Analysis and reproducibility
 
-- Pre-specify primary and secondary endpoints
+- Pre-specify primary and secondary endpoint *families* in the umbrella plan
+- Put exact estimators, splits, and code paths in the engineering plan / SAP
 - Separate derivation and evaluation where models are involved
 - Store analysis code in `scripts/`
 - Freeze a statistical analysis plan before outcome analysis
-- Record model names, versions, prompts, temperature, and retrieval settings
+- Record model names, versions, prompts, temperature, and retrieval settings in the engineering plan
 
 ## 3. Ethics application (Etikprövningsmyndigheten / Ethix)
 
@@ -187,7 +210,7 @@ Also useful: the current official stödmallar for forskningspersonsinformation a
 
 ### Alignment
 
-Ethics text will reuse the same objectives, population, and analysis plan as the research plan. I will not maintain divergent versions.
+Ethics text and Ethix answers must match the **umbrella** plan. The engineering plan may be richer, but not wider. I will not submit divergent aims, populations, or processing routes.
 
 ## 4. Bibliography
 
@@ -210,6 +233,34 @@ Ethics text will reuse the same objectives, population, and analysis plan as the
 4. Render Quarto and fix missing citations
 5. Export a plain reference list for the ethics pack if required
 
+## 5. AI-writing attribution ledger
+
+See `docs/ai-transparency.md`.
+
+I will be explicit about AI-authored text and code.
+
+### Per commit
+
+- Add trailer `AI-Written-Pct: <0-100>` to each content commit
+- Or backfill via `meta/ai-attribution-overrides.csv`
+
+### Totals
+
+```bash
+python scripts/ai_attribution.py refresh
+```
+
+This writes:
+
+- `meta/ai-attribution.csv` — one row per commit
+- `meta/ai-attribution-summary.md` — weighted and unweighted totals
+
+Primary disclosure figure: **weighted AI-written share** using lines added as weights.
+
+### Ethics use
+
+I will cite the current weighted total in the umbrella plan and Ethix AI-disclosure answers. I will refresh before submission.
+
 # Tooling workflow
 
 ```mermaid
@@ -218,20 +269,25 @@ flowchart TD
   B --> C[project.bib]
   C --> D[Literature review Quarto]
   A --> E[Design choice SPIROS or SPIRIT]
-  E --> F[Research plan Quarto]
-  D --> F
-  F --> G[Ethics application Quarto]
+  E --> F1[Umbrella research plan]
+  E --> F2[Engineering research plan]
+  D --> F1
+  F1 --> G[Ethics application Ethix draft]
+  F2 --> F1
   C --> G
-  F --> H[Checklists and SAP]
+  F1 --> H[SPIROS checklist]
   D --> I[HTML PDF outputs]
-  F --> I
+  F1 --> I
+  F2 --> I
   G --> I
   J[R or Python scripts] --> B
   J --> H
-  K[OpenRouter or open-weight LLM] --> L[Draft assist only]
-  L --> D
-  L --> F
-  L --> G
+  J --> K[AI attribution refresh]
+  L[OpenRouter or open-weight LLM] --> M[Draft assist only]
+  M --> D
+  M --> F1
+  M --> F2
+  M --> G
 ```
 
 ## Quarto
@@ -256,6 +312,7 @@ Use scripts for:
 - Evidence tables
 - Simple sample-size or precision calculations
 - Bibliography validation (missing DOI, empty year, duplicate titles)
+- AI attribution refresh (`scripts/ai_attribution.py`)
 
 Do not use notebooks as the only record. Keep runnable scripts in `scripts/`.
 
@@ -274,7 +331,7 @@ Disallowed:
 - Silent rewriting that adds claims without sources
 - Sending identifiable patient data to external APIs without approval
 
-I will disclose AI assistance in the protocol (SPIROS item on AI-assisted technology).
+I will disclose AI assistance in the protocol (SPIROS item on AI-assisted technology) and keep the attribution ledger current.
 
 # Writing rules for all documents
 
@@ -290,40 +347,45 @@ I will disclose AI assistance in the protocol (SPIROS item on AI-assisted techno
 
 | Step | Task | Output |
 |------|------|--------|
-| 0 | Confirm primary design (observational vs interventional) and data access route | One-page design note |
-| 1 | Set up Quarto project, BibTeX, folders, checklist stubs | Repo scaffold |
-| 2 | Build search strategy and seed bibliography | `project.bib` v0.1 |
-| 3 | Screen and theme the evidence | Screening table + theme notes |
-| 4 | Draft short literature review | `literature-review.qmd` |
-| 5 | Draft research plan mapped to SPIROS (and SPIRIT if needed) | `research-plan.qmd` + checklists |
-| 6 | Draft ethics application from the locked plan | `ethics-application.qmd` + annex list |
-| 7 | Internal consistency pass across all four products | Issue list closed |
-| 8 | External review (clinical, methods, privacy) | Revised PDFs |
-| 9 | Submit ethics; register protocol if required | Submission pack |
+| 0 | Confirm primary design and data access route | One-page design note |
+| 1 | Quarto, BibTeX, dual-plan stubs, AI ledger | Repo scaffold |
+| 2 | Draft umbrella plan bounds for Ethix | `research-plan-umbrella.qmd` |
+| 3 | Draft engineering plan inside those bounds | `research-plan-engineering.qmd` |
+| 4 | Build search strategy and bibliography | `project.bib` |
+| 5 | Screen and theme evidence | Screening table |
+| 6 | Draft short literature review | `literature-review.qmd` |
+| 7 | Draft Ethix answers from umbrella plan | `ethics-application.qmd` |
+| 8 | Consistency pass: engineering ⊆ umbrella; AI ledger refreshed | Issue list closed |
+| 9 | External review | Revised PDFs |
+| 10 | Submit Ethix; register if required | Submission pack |
 
 # Acceptance criteria
 
 I will treat the package as ready when:
 
 - The literature review answers the five scope questions and cites only verified BibTeX entries
-- The research plan completes the chosen checklist (SPIROS and/or SPIRIT), with explicit N/A notes
-- The ethics draft matches the plan on aims, data, consent, and AI processing, and maps to current Ethix Grundansökan fields
-- Swedish paste-ready answers exist for Ethix; submission remains manual in the portal
+- The umbrella plan completes SPIROS (and notes any SPIRIT contingency), with explicit N/A notes
+- The engineering plan maps each workstream to an umbrella aim and stays inside umbrella bounds
+- The ethics draft matches the umbrella plan and maps to current Ethix fields
+- Swedish paste-ready answers exist for Ethix; submission remains manual
 - All Quarto documents render cleanly with one bibliography
-- AI use is disclosed, and no identifiable patient text has been sent to unapproved services
+- Every content commit has an AI % (trailer or override); weighted total is published in `meta/ai-attribution-summary.md`
+- No identifiable patient text has been sent to unapproved services
 
 # Immediate next actions
 
 1. Write a one-page design note: population, data source, observational vs interventional, primary outcome
-2. Obtain current Ethix field list / institutional template (or confirm use of published guidance PDF as interim map)
-3. Scaffold remaining `.qmd` stubs and expand `project.bib`
-4. Draft search strings for perioperative assessment and clinical LLM/agent evidence
-5. Complete SPIROS checklist stub against the intended observational protocol
-6. Draft Ethix-aligned Swedish answers and FPI/samtycke from official stödmallar
+2. Obtain current Ethix field list / institutional template
+3. Fill umbrella plan bounds first, then engineering detail
+4. Expand `project.bib` and run searches
+5. Complete SPIROS checklist against the umbrella plan
+6. Draft Ethix-aligned Swedish answers and FPI/samtycke
+7. Keep `AI-Written-Pct` on every commit and refresh the ledger
 
 # Key references to seed early
 
 - SPIRIT 2025 statement and explanation & elaboration
 - SPIROS checklist and explanation materials (Maastricht / EQUATOR-linked resources)
 - STROBE for later results reporting of observational analyses
-- Local institutional REC/IRB guidance and national health-data rules relevant to chart review
+- Local institutional guidance and national health-data rules relevant to chart review
+- Etikprövningsmyndigheten Ethix guidance and stödmallar

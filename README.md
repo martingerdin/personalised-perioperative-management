@@ -2,16 +2,41 @@ This repository includes documents and code for a research project on personalis
 
 ## Research documents plan
 
-See [`docs/plan-research-documents.qmd`](docs/plan-research-documents.qmd) for the plan to produce:
+See [`docs/plan-research-documents.qmd`](docs/plan-research-documents.qmd).
+
+Deliverables:
 
 1. Short literature review
-2. Research plan (SPIROS / SPIRIT)
-3. Ethics application
-4. Shared BibTeX bibliography
+2. Umbrella research plan for Ethix (stable, broad)
+3. Engineering research plan (detailed, living)
+4. Ethics application draft for Etikprövningsmyndigheten / Ethix
+5. Shared BibTeX bibliography
+6. AI-writing attribution ledger with running totals
 
 Supporting paths:
 
+- `docs/dual-research-plans.md` — why two plans exist
+- `docs/ai-transparency.md` — how AI % is logged
+- `docs/research-plan-umbrella.qmd` — ethics-facing protocol stub
+- `docs/research-plan-engineering.qmd` — internal work-plan stub
 - `references/project.bib` — shared bibliography
 - `checklists/` — SPIROS and SPIRIT stubs
-- `scripts/` — screening and bibliography helpers
+- `meta/ai-attribution-*.csv|md` — AI share ledger and summary
+- `scripts/ai_attribution.py` — refresh totals
 - `_quarto.yml` — Quarto project settings
+
+## AI-writing disclosure
+
+Every content commit should include:
+
+```text
+AI-Written-Pct: 85
+```
+
+Then run:
+
+```bash
+python scripts/ai_attribution.py refresh
+```
+
+See the current total in [`meta/ai-attribution-summary.md`](meta/ai-attribution-summary.md).

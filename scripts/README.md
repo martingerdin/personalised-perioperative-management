@@ -1,4 +1,16 @@
-# Screening log (placeholder)
+# Scripts
+
+## AI attribution
+
+```bash
+python scripts/ai_attribution.py refresh
+python scripts/ai_attribution.py show
+python scripts/ai_attribution.py trailer-help
+```
+
+Require trailer `AI-Written-Pct: <0-100>` on content commits. Backfill old commits in `meta/ai-attribution-overrides.csv`.
+
+## Screening log (placeholder)
 
 Use R or Python to maintain a machine-readable screening table. Keep decisions auditable.
 
