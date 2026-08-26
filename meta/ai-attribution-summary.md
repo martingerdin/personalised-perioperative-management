@@ -4,13 +4,13 @@ Per-commit AI-written share for this repository.
 
 ## Totals
 
-- Commits scanned: **6**
-- Commits with AI %: **6**
+- Commits scanned: **8**
+- Commits with AI %: **8**
 - Commits missing AI %: **0**
-- Lines added (weighted base): **1183**
-- Weighted AI-written share: **95.0%**
-- Weighted human-written share: **5.0%**
-- Unweighted mean AI %: **80.0%**
+- Lines added (weighted base): **1216**
+- Weighted AI-written share: **94.9%**
+- Weighted human-written share: **5.1%**
+- Unweighted mean AI %: **83.8%**
 
 Weighted share = sum(ai_pct × lines_added) / sum(lines_added).
 
@@ -30,4 +30,6 @@ Weighted share = sum(ai_pct × lines_added) / sum(lines_added).
 | `960eeeb` | 2026-08-26 | 95 | 7 | override | Add Ethix field-list next step and acceptance criteria |
 | `90b24b1` | 2026-08-26 | 95 | 648 | trailer | Split ethics umbrella and engineering plans; add AI attribution ledger |
 | `9cccb3a` | 2026-08-26 | 100 | 8 | trailer | Refresh AI attribution summary after dual-plan commit |
+| `1c2df79` | 2026-08-26 | 100 | 8 | trailer | Include prior refresh commit in AI attribution ledger |
+| `8cef07c` | 2026-08-26 | 90 | 25 | trailer | Rename engineering research plan to detailed research plan |
 
