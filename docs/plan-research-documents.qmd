@@ -307,16 +307,19 @@ I will treat the package as ready when:
 
 - The literature review answers the five scope questions and cites only verified BibTeX entries
 - The research plan completes the chosen checklist (SPIROS and/or SPIRIT), with explicit N/A notes
-- The ethics application matches the plan on aims, data, consent, and AI processing
+- The ethics draft matches the plan on aims, data, consent, and AI processing, and maps to current Ethix Grundansökan fields
+- Swedish paste-ready answers exist for Ethix; submission remains manual in the portal
 - All Quarto documents render cleanly with one bibliography
 - AI use is disclosed, and no identifiable patient text has been sent to unapproved services
 
 # Immediate next actions
 
 1. Write a one-page design note: population, data source, observational vs interventional, primary outcome
-2. Scaffold `_quarto.yml`, empty `.qmd` stubs, and `project.bib` with methods guidelines
-3. Draft search strings for perioperative assessment and clinical LLM/agent evidence
-4. Complete SPIROS checklist stub against the intended observational protocol
+2. Obtain current Ethix field list / institutional template (or confirm use of published guidance PDF as interim map)
+3. Scaffold remaining `.qmd` stubs and expand `project.bib`
+4. Draft search strings for perioperative assessment and clinical LLM/agent evidence
+5. Complete SPIROS checklist stub against the intended observational protocol
+6. Draft Ethix-aligned Swedish answers and FPI/samtycke from official stödmallar
 
 # Key references to seed early
 
