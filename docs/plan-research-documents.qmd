@@ -132,26 +132,50 @@ If we test an agent-supported pathway, I will add SPIRIT 2025 items that SPIROS 
 - Freeze a statistical analysis plan before outcome analysis
 - Record model names, versions, prompts, temperature, and retrieval settings
 
-## 3. Ethics application
+## 3. Ethics application (Etikprövningsmyndigheten / Ethix)
 
-**File:** `docs/ethics-application.qmd`  
-**Annexes:** consent templates, data flow diagram, risk register
+**Target authority:** Etikprövningsmyndigheten  
+**Submission system:** Ethix (login portal; Grundansökan / Ändringsansökan)  
+**Language:** Swedish in the Ethix form  
+**File:** `docs/ethics-application.qmd` (working draft aligned to Ethix fields)  
+**Annexes:** forskningspersonsinformation, samtycke, research plan, data flow, risk register
 
-### Content blocks
+### API reality check
 
-1. Lay summary
+I cannot submit or fill Ethix through an application API.
+
+- Ethix itself has no public write API for drafting or lodging applications.
+- Applications must be entered in the Ethix portal by an authorised user.
+- The authority publishes a **statistics** API/portal for aggregated research statistics. That is read-only analytics, not a submission interface.
+
+So I will draft offline text mapped to Ethix questions. A human will paste and submit in Ethix.
+
+### What I need from you
+
+Prefer one of these, in order:
+
+1. **Best:** an export, screenshots, or field list from the current Ethix Grundansökan (sections and question text as shown today)
+2. **Good:** your institutional template already adapted to Ethix
+3. **Fallback:** I draft against the authority’s published English guidance PDF of the initial application form, knowing it may lag the live Ethix form (new forms are expected during 2026)
+
+Also useful: the current official stödmallar for forskningspersonsinformation and samtycke, if your local version differs.
+
+### Content blocks (mapped for Ethix paste-in)
+
+1. Lay summary / projektbeskrivning in plain Swedish
 2. Scientific background (short; cite the literature review)
 3. Aims and design
 4. Participants and data sources
 5. Recruitment or record access pathway
-6. Consent, waiver, or opt-out rationale
-7. Data minimisation and de-identification
+6. Consent, waiver, or opt-out rationale under etikprövningslagen
+7. Data minimisation and de-identification (känsliga personuppgifter)
 8. Model and vendor risk (OpenRouter, local open-weight models, logs, retention)
 9. Clinical safety: no autonomous decisions; clinician remains accountable
 10. Bias, equity, and failure modes
 11. Incident reporting
 12. Benefit–risk balance
 13. Dissemination and data sharing limits
+14. Bilagor list matching Ethix upload expectations
 
 ### AI-specific ethics points I will address
 
