@@ -4,13 +4,13 @@ Per-commit AI-written share for this repository.
 
 ## Totals
 
-- Commits scanned: **12**
-- Commits with AI %: **12**
-- Commits missing AI %: **0**
-- Lines added (weighted base): **3045**
-- Weighted AI-written share: **93.1%**
-- Weighted human-written share: **6.9%**
-- Unweighted mean AI %: **87.2%**
+- Commits scanned: **17**
+- Commits with AI %: **15**
+- Commits missing AI %: **2**
+- Lines added (weighted base): **3155**
+- Weighted AI-written share: **93.0%**
+- Weighted human-written share: **7.0%**
+- Unweighted mean AI %: **88.3%**
 
 Weighted share = sum(ai_pct × lines_added) / sum(lines_added).
 
@@ -33,7 +33,12 @@ Weighted share = sum(ai_pct × lines_added) / sum(lines_added).
 | `1c2df79` | 2026-08-26 | 100 | 8 | trailer | Include prior refresh commit in AI attribution ledger |
 | `8cef07c` | 2026-08-26 | 90 | 25 | trailer | Rename engineering research plan to detailed research plan |
 | `5c43f8b` | 2026-08-26 | 100 | 10 | trailer | Refresh AI attribution after detailed-plan rename |
+| `b4e9798` | 2026-09-01 | — | 0 | missing | Add ethix template |
 | `073f7fd` | 2026-09-01 | 92 | 1776 | trailer | Convert Ethix PDF to field map and add GitHub issues from plan |
 | `43a6b39` | 2026-09-01 | 100 | 10 | trailer | Refresh AI attribution after Ethix conversion and issues |
 | `59dba40` | 2026-09-01 | 85 | 33 | trailer | Reorder plan: literature before umbrella research plan |
+| `9951606` | 2026-09-01 | 100 | 10 | trailer | Refresh AI attribution after sequence reorder |
+| `fb619aa` | 2026-09-01 | 90 | 1 | trailer | Fix detailed-plan issue dependency in issue script |
+| `dec938b` | 2026-09-01 | — | 2917 | missing | Merge first PR with the plan |
+| `22167e2` | 2026-09-01 | 88 | 99 | trailer | Add design note for issue #2 (population, data, design, outcomes) |
 
