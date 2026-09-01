@@ -4,13 +4,13 @@ Per-commit AI-written share for this repository.
 
 ## Totals
 
-- Commits scanned: **10**
-- Commits with AI %: **10**
+- Commits scanned: **12**
+- Commits with AI %: **12**
 - Commits missing AI %: **0**
-- Lines added (weighted base): **3002**
-- Weighted AI-written share: **93.2%**
-- Weighted human-written share: **6.8%**
-- Unweighted mean AI %: **86.2%**
+- Lines added (weighted base): **3045**
+- Weighted AI-written share: **93.1%**
+- Weighted human-written share: **6.9%**
+- Unweighted mean AI %: **87.2%**
 
 Weighted share = sum(ai_pct × lines_added) / sum(lines_added).
 
@@ -34,4 +34,6 @@ Weighted share = sum(ai_pct × lines_added) / sum(lines_added).
 | `8cef07c` | 2026-08-26 | 90 | 25 | trailer | Rename engineering research plan to detailed research plan |
 | `5c43f8b` | 2026-08-26 | 100 | 10 | trailer | Refresh AI attribution after detailed-plan rename |
 | `073f7fd` | 2026-09-01 | 92 | 1776 | trailer | Convert Ethix PDF to field map and add GitHub issues from plan |
+| `43a6b39` | 2026-09-01 | 100 | 10 | trailer | Refresh AI attribution after Ethix conversion and issues |
+| `59dba40` | 2026-09-01 | 85 | 33 | trailer | Reorder plan: literature before umbrella research plan |
 
