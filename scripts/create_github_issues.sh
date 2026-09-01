@@ -106,7 +106,7 @@ Stay **inside** umbrella bounds. Flag anything that would need an Ethix ändring
 
 ## References
 - `docs/two-research-plans.md`
-- Blocked on: umbrella plan draft (can start in parallel with explicit assumptions)
+- Depends on: #3 Umbrella research plan
 EOF
 )"
 
