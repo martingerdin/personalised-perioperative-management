@@ -1,0 +1,498 @@
+meta:
+  title: Personalised perioperative medicine
+  type: Grundansökan
+  subject_area: Medicin och hälsovetenskap
+  status: Påbörjad ansökan
+  pi: Martin Knut Erik Filippus Gerdin Wärnberg
+  source_pdf: docs/ethix/ethix-template.pdf
+fields:
+- id: '1.4'
+  section: 1. Huvudsakliga uppgifter
+  prompt_sv: Kommer flera forskningshuvudmän a medverka i forskningsprojektet?
+  answer: Ja
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''
+- id: '1.5'
+  section: 1. Huvudsakliga uppgifter
+  prompt_sv: Hemvist för forskningen
+  answer: ''
+  status: todo
+  draft_sv: ''
+  source_doc: ''
+- id: 1.6.1
+  section: 1. Huvudsakliga uppgifter
+  prompt_sv: Institution/hemvist som ansvarig forskarett är verksam vid
+  answer: ''
+  status: todo
+  draft_sv: ''
+  source_doc: ''
+- id: '1.7'
+  section: 1. Huvudsakliga uppgifter
+  prompt_sv: Är den ansvariga forskaren disputerad?
+  answer: Ja Frågor för avgiskategori
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''
+- id: '1.9'
+  section: 1. Huvudsakliga uppgifter
+  prompt_sv: Hur många forskningshuvudmän kommer a ingå i forskningsprojektet?
+  answer: Flera
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''
+- id: 1.9.1
+  section: 1. Huvudsakliga uppgifter
+  prompt_sv: '[Om Flera] Har samtliga forskningspersoner ett omedelbart samband'
+  answer: med endast en av forskningshuvudmännen? Ja
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''
+- id: '1.10'
+  section: 1. Huvudsakliga uppgifter
+  prompt_sv: Innefattar forskningen endast behandling av personuppgifter?
+  answer: Ja
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''
+- id: '2.1'
+  section: 2. Typ av forskning – initiala frågor
+  prompt_sv: Gör en egen bedömning och angett på vilka punkter nedan som
+  answer: forskningen omfattas av 3-4 §§ etikprövningslagen. Observera a myndigheten
+    kan komma a göra en annan bedömning. ✓ 3 § 1 Forskningen innefaar behandling av
+    känsliga personuppgifter. --- Pagett 2 ---
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''
+- id: 2.1.1
+  section: 2. Typ av forskning – initiala frågor
+  prompt_sv: '[Om 3 § 1] Gör en egen bedömning och angett vilken typ av känsliga'
+  answer: personuppgifter som kommer a behandlas i projektet. Observera a myndigheten
+    kan komma a göra en annan bedömning. ✓ hälsa
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''
+- id: '2.2'
+  section: 2. Typ av forskning – initiala frågor
+  prompt_sv: Önskas ett rådgivandett yttrande?
+  answer: Ja
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''
+- id: '2.3'
+  section: 2. Typ av forskning – initiala frågor
+  prompt_sv: Välj ämnesklassificering
+  answer: ''
+  status: todo
+  draft_sv: ''
+  source_doc: ''
+- id: 2.3.3
+  section: 2. Typ av forskning – initiala frågor
+  prompt_sv: Medicin och hälsovetenskap
+  answer: ✓ 30201 Anestesi och intensivvård
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''
+- id: '2.4'
+  section: 2. Typ av forskning – initiala frågor
+  prompt_sv: Gäller studien klinisk forskning?
+  answer: Ja
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''
+- id: 2.4.1
+  section: 2. Typ av forskning – initiala frågor
+  prompt_sv: Vilken/vilka diagnoskoder avser forskningen (ICD-10-SE)
+  answer: ✓ C00-D48 Tumörer ✓ I00-I99 Cirkulationsorganens sjukdomar ✓ J00-J99 Andningsorganens
+    sjukdomar ✓ K00-K93 Matsmältningsorganens sjukdomar ✓ L00-L99 Hudens och underhudens
+    sjukdomar ✓ M00-M99 Sjukdomar i muskuloskeletala systemet och bindväven ✓ N00-N99
+    Sjukdomar i urin- och könsorganen ✓ S00-T98 Skador, förgiftningar och vissa andra
+    följder av yttrett orsaker ✓ V01-Y98 Yrett orsaker tititill sjukdom och död
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''
+- id: 2.4.2
+  section: 2. Typ av forskning – initiala frågor
+  prompt_sv: Vilken studietyp beskriver bäst den aktuella studien?
+  answer: ✓ Observation
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''
+- id: '2.5'
+  section: 2. Typ av forskning – initiala frågor
+  prompt_sv: Särskilda frågor för medicinsk forskning
+  answer: ''
+  status: todo
+  draft_sv: ''
+  source_doc: ''
+- id: 2.5.1
+  section: 2. Typ av forskning – initiala frågor
+  prompt_sv: Avser ansökan forskning som inbegriper äggdonation?
+  answer: Nej
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''
+- id: 2.5.2
+  section: 2. Typ av forskning – initiala frågor
+  prompt_sv: Avser ansökan forskning med xenogen cetillerapi?
+  answer: Nej
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''
+- id: 2.5.3
+  section: 2. Typ av forskning – initiala frågor
+  prompt_sv: Kommer joniserandett strålning ingå i forskningsprojektet?
+  answer: Nej --- Pagett 3 ---
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''
+- id: 2.5.4
+  section: 2. Typ av forskning – initiala frågor
+  prompt_sv: Kommer biologiskt material a användas i projektet?
+  answer: Nej
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''
+- id: 2.5.5
+  section: 2. Typ av forskning – initiala frågor
+  prompt_sv: Avser forskningen klinisk prövning eller en prestandastudiett av
+  answer: medicinteknisk produkt/medicinteknisk produkt för in vitro-diagnosk? Nej
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''
+- id: '3.1'
+  section: 3. Syftett och frågeställningar
+  prompt_sv: Skriv en populärvetenskaplig sammanfattning av forskningsprojektet.
+  answer: ''
+  status: todo
+  draft_sv: ''
+  source_doc: ''
+- id: '3.2'
+  section: 3. Syftett och frågeställningar
+  prompt_sv: Vad är det vetenskapliga syftet med projektet?
+  answer: ''
+  status: todo
+  draft_sv: ''
+  source_doc: ''
+- id: '3.3'
+  section: 3. Syftett och frågeställningar
+  prompt_sv: Vilka är dett vetenskapliga frågeställningarna?
+  answer: ''
+  status: todo
+  draft_sv: ''
+  source_doc: ''
+- id: '3.4'
+  section: 3. Syftett och frågeställningar
+  prompt_sv: Kommer delar av den forskning som beskrivs i ansökan skett utanför
+  answer: Sverige? Nej
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''
+- id: '4.1'
+  section: 4. Metod
+  prompt_sv: Redogör för metod inkl. proceduren, tekniken eller behandlingen.
+  answer: ''
+  status: todo
+  draft_sv: ''
+  source_doc: ''
+- id: '4.2'
+  section: 4. Metod
+  prompt_sv: 'Om forskningen går ut på a pröva en ny metod eller behandling:'
+  answer: Redogör för på vilket sä metoden skiljer sig från den ordinariett verksamheten.
+    -
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''
+- id: '4.3'
+  section: 4. Metod
+  prompt_sv: Redogör för tidigarett erfarenheter (egna och/eller andras) av den valda
+  answer: metoden. -
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''
+- id: '5.1'
+  section: 5. Tidsplan
+  prompt_sv: 'Förväntat startdatum för projektet:'
+  answer: '0000-00-00'
+  status: placeholder
+  draft_sv: ''
+  source_doc: ''
+- id: '5.2'
+  section: 5. Tidsplan
+  prompt_sv: 'Förväntat slutdatum för projektet:'
+  answer: '0000-00-00'
+  status: placeholder
+  draft_sv: ''
+  source_doc: ''
+- id: '5.3'
+  section: 5. Tidsplan
+  prompt_sv: 'Tidsplan för dett olika delar som ingår i projektet:'
+  answer: ''
+  status: todo
+  draft_sv: ''
+  source_doc: ''
+- id: '6.1'
+  section: 6. Datainsamling
+  prompt_sv: Redogör för datainsamling och datas karaktär.
+  answer: ''
+  status: todo
+  draft_sv: ''
+  source_doc: ''
+- id: '6.2'
+  section: 6. Datainsamling
+  prompt_sv: Redogör för dett beräkningar och/eller överväganden som motiverar
+  answer: undersökningsmaterialets storlek. -
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''
+- id: '6.3'
+  section: 6. Datainsamling
+  prompt_sv: Hur kommer undersökningsprocedurerna a dokumenteras?
+  answer: ''
+  status: todo
+  draft_sv: ''
+  source_doc: ''
+- id: '6.4'
+  section: 6. Datainsamling
+  prompt_sv: Hur kommer insamladett data a hanteras och förvaras?
+  answer: ''
+  status: todo
+  draft_sv: ''
+  source_doc: ''
+- id: '7.1'
+  section: 7. Etiska överväganden
+  prompt_sv: Vilka risker kan ett deltagandett medföra för dett forskningspersoner
+    som
+  answer: ingår i forskningsprojektet? -
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''
+- id: '7.2'
+  section: 7. Etiska överväganden
+  prompt_sv: Vilken nya kan ett deltagandett medföra för dett forskningspersoner som
+  answer: ingår i forskningsprojektet? -
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''
+- id: '7.3'
+  section: 7. Etiska överväganden
+  prompt_sv: Gör en värdering av förhållandet mellan riskerna och nyttan av
+  answer: projektet. --- Pagett 5 --- -
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''
+- id: '7.4'
+  section: 7. Etiska överväganden
+  prompt_sv: Beskriv hur projektet har utformats för a minimera riskerna för
+  answer: forskningspersonerna. -
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''
+- id: '7.5'
+  section: 7. Etiska överväganden
+  prompt_sv: Identifiera och precisera om eventuella etiska problem
+  answer: (nackdelar/fördelar) kan uppstå i ett vidarett perspektiv genom forskningsprojektet.
+    -
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''
+- id: '8.1'
+  section: 8. Forskningspersoner
+  prompt_sv: Hur görs urvalet av forskningspersoner?
+  answer: ''
+  status: todo
+  draft_sv: ''
+  source_doc: ''
+- id: '8.2'
+  section: 8. Forskningspersoner
+  prompt_sv: Hur många forskningspersoner kommer a inkluderas i Sverige?
+  answer: '0'
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''
+- id: '8.3'
+  section: 8. Forskningspersoner
+  prompt_sv: Angett ålder på forskningspersoner som kommer a inkluderas i
+  answer: projektet. ✓ 18-64 ✓ 65+
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''
+- id: '8.4'
+  section: 8. Forskningspersoner
+  prompt_sv: Angett kön på dett forskningspersoner som kommer a inkluderas i
+  answer: projektet. ✓ Kvinna ✓ Man ✓ Annan
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''
+- id: '8.5'
+  section: 8. Forskningspersoner
+  prompt_sv: Vilka urvalskriterier kommer a användas för inklusion?
+  answer: ''
+  status: todo
+  draft_sv: ''
+  source_doc: ''
+- id: '8.6'
+  section: 8. Forskningspersoner
+  prompt_sv: Vilka urvalskriterier kommer a användas för exklusion?
+  answer: ''
+  status: todo
+  draft_sv: ''
+  source_doc: ''
+- id: '8.7'
+  section: 8. Forskningspersoner
+  prompt_sv: Angett relationen mellan forskarett och forskningspersonerna.
+  answer: '- --- Pagett 6 ---'
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''
+- id: '8.8'
+  section: 8. Forskningspersoner
+  prompt_sv: Vilket försäkringsskydd finns för dett forskningspersoner som deltar
+    i
+  answer: forskningsprojektet? -
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''
+- id: '8.9'
+  section: 8. Forskningspersoner
+  prompt_sv: Redogör för den beredskap som finns för a hantera oväntadett bifynd
+  answer: eller händelser under forskningsprocessen som kan äventyra forskningspersonernas
+    hälsa, säkerhet och personlig integritet. -
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''
+- id: '8.10'
+  section: 8. Forskningspersoner
+  prompt_sv: Kommer ekonomisk ersäning eller andra förmåner betalas ut ll
+  answer: forskningspersonerna? Nej
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''
+- id: '9.1'
+  section: 9. Information och samtycke
+  prompt_sv: Kommer forskningspersonerna a informeras om forskningsprojektet
+  answer: och titillfrågas om dett vititill vara med eller inte? Nej
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''
+- id: 9.1.2
+  section: 9. Information och samtycke
+  prompt_sv: '[Om Nej 9.1] Movera varför forskningspersonerna intett ska'
+  answer: informeras och titillfrågas. -
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''
+- id: '9.3'
+  section: 9. Information och samtycke
+  prompt_sv: Kommer forskningspersoner, vars mening på grund av sjukdom, psykisk
+  answer: störning, försvagat hälsotillstånd eller något annat liknandett förhållandett
+    intett kan inhämtas, a ingå i forskningsprojektet? Ja
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''
+- id: 9.3.1
+  section: 9. Information och samtycke
+  prompt_sv: '[Om Ja 9.3] Movera varför denna grupp av forskningspersoner ska'
+  answer: ingå i projektet. -
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''
+- id: 9.3.2
+  section: 9. Information och samtycke
+  prompt_sv: '[Om Ja 9.3] Beskriv hur samråd med närmastett anhöriga, god man eller'
+  answer: förvaltarett kommer a ske. -
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''
+- id: '10.1'
+  section: 10. Register- och journaluppgifter
+  prompt_sv: Kommer projektet a begära ut uppgifter från ett befintligt register?
+  answer: Ja
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''
+- id: 10.1.1
+  section: 10. Register- och journaluppgifter
+  prompt_sv: '[Om Ja 10.1] Ur vilket eller vilka register kommer uppgifterna a'
+  answer: begäras? -
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''
+- id: 10.1.2
+  section: 10. Register- och journaluppgifter
+  prompt_sv: '[Om Ja 10.1] Vilka uppgifter kommer a begäras ut och varför?'
+  answer: ''
+  status: todo
+  draft_sv: ''
+  source_doc: ''
+- id: '11.1'
+  section: 11. Resultat från djurförsök
+  prompt_sv: Finns det relevanta resultat från djurförsök?
+  answer: Nej
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''
+- id: 11.1.2
+  section: 11. Resultat från djurförsök
+  prompt_sv: '[Om Nej 11.1] Angett anledningen titill a djurförsök ej gjorts.'
+  answer: ''
+  status: todo
+  draft_sv: ''
+  source_doc: ''
+- id: '12.1'
+  section: 12. Redovisning av resultat
+  prompt_sv: Hur garanteras tillgång titill data för forskningshuvudmannen och
+  answer: medverkandett forskare? -
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''
+- id: '12.2'
+  section: 12. Redovisning av resultat
+  prompt_sv: Vem eller vilka ansvarar för databearbetning och skriftlig redovisning
+  answer: av resultaten? -
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''
+- id: '12.3'
+  section: 12. Redovisning av resultat
+  prompt_sv: Hur och när planeras resultaten a offentliggöras?
+  answer: ''
+  status: todo
+  draft_sv: ''
+  source_doc: ''
+- id: '12.4'
+  section: 12. Redovisning av resultat
+  prompt_sv: På vilket sä garanteras forskningspersonernas rä titill integritet när
+  answer: materialet offentliggörs? - --- Pagett 8 ---
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''
+- id: '13.1'
+  section: 13. Ekonomiska förhållanden
+  prompt_sv: Är forskningen företagsinitierad?
+  answer: Nej
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''
+- id: '13.2'
+  section: 13. Ekonomiska förhållanden
+  prompt_sv: Hur kommer forskningsprojektet a finansieras?
+  answer: ✓ ALF-medel ✓ Bidrag från svensk statlig myndighet eller forskningsråd ✓
+    Bidrag från svensk stiftelse, fond eller liknande
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''
+- id: '13.3'
+  section: 13. Ekonomiska förhållanden
+  prompt_sv: Redovisa eventuella ekonomiska överenskommelser med bidragsgivare
+  answer: eller andra finansiärer (namn och belopp). -
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''
+- id: '13.4'
+  section: 13. Ekonomiska förhållanden
+  prompt_sv: Redovisa forskningshuvudmannens, ansvarig forskares och
+  answer: medverkandett forskares egna ekonomiska intressen. -
+  status: prefilled
+  draft_sv: ''
+  source_doc: ''

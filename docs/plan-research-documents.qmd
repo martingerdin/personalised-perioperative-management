@@ -161,6 +161,7 @@ If we later test an agent-supported pathway, I will add a separate SPIRIT 2025 p
 **Submission system:** Ethix (login portal; Grundansökan / Ändringsansökan)  
 **Language:** Swedish in the Ethix form  
 **File:** `docs/ethics-application.qmd` (working draft aligned to Ethix fields)  
+**Field map:** `docs/ethix/ethix-template.md`, `docs/ethix/ethix-template-fields.yaml`  
 **Annexes:** forskningspersonsinformation, samtycke, research plan, data flow, risk register
 
 ### API reality check
@@ -182,6 +183,8 @@ Prefer one of these, in order:
 3. **Fallback:** I draft against the authority’s published English guidance PDF of the initial application form, knowing it may lag the live Ethix form (new forms are expected during 2026)
 
 Also useful: the current official stödmallar for forskningspersonsinformation and samtycke, if your local version differs.
+
+**Update:** Ethix template converted to `docs/ethix/ethix-template.md` and `docs/ethix/ethix-template-fields.yaml` from `ethix-template.pdf` on `main`.
 
 ### Content blocks (mapped for Ethix paste-in)
 
@@ -374,12 +377,14 @@ I will treat the package as ready when:
 
 # Immediate next actions
 
+Track as GitHub issues (`scripts/create_github_issues.sh`).
+
 1. Write a one-page design note: population, data source, observational vs interventional, primary outcome
-2. Obtain current Ethix field list / institutional template
+2. ~~Obtain Ethix template~~ → converted to `docs/ethix/ethix-template.md`
 3. Fill umbrella plan bounds first, then detailed-plan content
 4. Expand `project.bib` and run searches
 5. Complete SPIROS checklist against the umbrella plan
-6. Draft Ethix-aligned Swedish answers and FPI/samtycke
+6. Draft Ethix-aligned Swedish answers (see field map)
 7. Keep `AI-Written-Pct` on every commit and refresh the ledger
 
 # Key references to seed early

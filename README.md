@@ -19,6 +19,7 @@ Supporting paths:
 - `docs/ai-transparency.md` — how AI % is logged
 - `docs/research-plan-umbrella.qmd` — ethics-facing protocol stub
 - `docs/research-plan-detailed.qmd` — internal detailed work-plan stub
+- `docs/ethix/` — Ethix PDF, field map (`.md`), and YAML
 - `references/project.bib` — shared bibliography
 - `checklists/` — SPIROS and SPIRIT stubs
 - `meta/ai-attribution-*.csv|md` — AI share ledger and summary
