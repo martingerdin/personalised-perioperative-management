@@ -1,0 +1,34 @@
+---
+title: "Umbrella research plan (ethics)"
+author: "Research team"
+date: today
+format:
+  html:
+    toc: true
+  pdf:
+    toc: true
+bibliography: ../references/project.bib
+---
+
+# Status
+
+Stub. This will be the stable SPIROS-aligned protocol annexed to the Ethix Grundansökan.
+
+# Intent
+
+I will keep this plan broad enough that ordinary method iteration does not force an ethics amendment. Detail belongs in `research-plan-detailed.qmd`.
+
+# Placeholder sections
+
+1. Title, version, roles
+2. Background and rationale
+3. Aims and research questions
+4. Design and setting
+5. Participants and data
+6. Variables and outcomes (families, not final feature lists)
+7. AI processing principles and human oversight
+8. Statistics at protocol level
+9. Ethics, consent, data protection
+10. Risks and mitigations
+11. Dissemination and AI-writing transparency
+12. SPIROS checklist map
