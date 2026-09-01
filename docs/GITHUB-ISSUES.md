@@ -19,6 +19,8 @@ Work the plan one issue at a time. Regenerate with `scripts/create_github_issues
 
 Suggested order: **2 → 5 → 6 → 7 → 3 → 4 → 8 → 9 → 10 → 11 → 12 → 13**
 
+- **#2** [`docs/design-note.qmd`](design-note.qmd) — draft done; awaiting PI sign-off
+
 Rationale: the umbrella plan and Ethix syfte/metod sections need an evidence base. Literature comes first; the design note still anchors scope before searching.
 
 Ethix field map: `docs/ethix/ethix-template.md` (68 fields; 18 need draft text).
