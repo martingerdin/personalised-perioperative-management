@@ -14,6 +14,8 @@ bibliography: ../references/project.bib
 
 Stub. This will be the stable SPIROS-aligned protocol annexed to the Ethix Grundansökan.
 
+**Scope locked in:** [`design-note.qmd`](design-note.qmd) (issue #2).
+
 # Intent
 
 I will keep this plan broad enough that ordinary method iteration does not force an ethics amendment. Detail belongs in `research-plan-detailed.qmd`.

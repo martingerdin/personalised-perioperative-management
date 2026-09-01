@@ -15,6 +15,7 @@ Deliverables:
 
 Supporting paths:
 
+- `docs/design-note.qmd` — locked scope (population, data, design, outcomes)
 - `docs/two-research-plans.md` — why two plans exist
 - `docs/ai-transparency.md` — how AI % is logged
 - `docs/research-plan-umbrella.qmd` — ethics-facing protocol stub

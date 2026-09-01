@@ -14,6 +14,8 @@ bibliography: ../references/project.bib
 
 Stub. This is the living plan that guides day-to-day research work. It must stay inside the umbrella ethics plan.
 
+**Scope locked in:** [`design-note.qmd`](design-note.qmd) (issue #2).
+
 # Intent
 
 I will use this document to steer concrete work: methods, architecture, models, evals, prompts, milestones, and risks.

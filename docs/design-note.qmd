@@ -1,0 +1,92 @@
+---
+title: "Design note"
+author: "Martin Gerdin"
+date: today
+format:
+  html:
+    toc: false
+  pdf:
+    toc: false
+---
+
+# Purpose
+
+I lock scope here before the literature review, umbrella plan, and Ethix application. This note is one page of decisions and open points. It does not replace the protocol.
+
+**Status:** Draft — awaiting sign-off by responsible researcher.
+
+# Population and setting
+
+- **Population:** Adults (≥18 years) who undergo planned surgery under anaesthesia in Sweden.
+- **Setting:** Swedish hospital perioperative and anaesthesia care. Mixed surgical categories (aligning with the ICD-10 groups in the Ethix draft).
+- **Unit of analysis:** The surgical episode and linked preoperative assessment period, unless a sub-study states otherwise.
+- **Inclusion (working):** Patients with sufficient chart and structured perioperative data for the planned analyses.
+- **Exclusion (working):** Episodes with no usable preoperative record or missing outcome linkage.
+
+**Open:** Exact hospital(s)/region(s) and final inclusion rules after data access is confirmed.
+
+# Data sources and access
+
+| Source | Content | Role |
+|--------|---------|------|
+| Electronic health records (journal) | History, examination notes, assessments, comorbidity | Chart review; AI-assisted extraction in controlled environment |
+| Structured perioperative data | Anaesthesia records, surgery codes, timings, labs where available | Variables and outcomes |
+| Registers (as approved) | Outcomes, diagnoses, mortality, readmission | Validation and follow-up |
+
+- **Access route (to confirm):** Research agreement with data controller(s); register extracts via approved pathways (e.g. regional database, SWEDEPOR/Surgery/quality registers where applicable).
+- **Ethix alignment:** Register and journal data (`§10.1`); sensitive health data; no direct participant contact in the current Ethix draft (`§9.1` Nej).
+
+**Open:** Named registers, legal basis for each source, and data processor agreements.
+
+# Design
+
+| Track | Guideline | Status |
+|-------|-----------|--------|
+| **Primary:** Observational chart-based study | SPIROS | In scope for ethics application and first analyses |
+| **Contingent:** Trial of AI-supported vs usual preoperative pathway | SPIRIT 2025 | Not started; separate protocol and amendment if pursued |
+
+**Primary design elements:**
+
+- Retrospective and/or prospective observational cohort using routinely collected data.
+- Development and evaluation of AI-assisted methods to structure preoperative fitness signals and draft management suggestions.
+- Association analyses between patient-level variables and perioperative outcomes.
+- No change to clinical care solely because of this research phase.
+
+# Outcome families
+
+## Primary (for association and feasibility work)
+
+1. **Major perioperative morbidity** — composite or domain-specific (cardiac, pulmonary, renal, infectious, bleeding) as data allow.
+2. **Critical care escalation** — unplanned ICU/HDU admission or equivalent.
+3. **Mortality** — in-hospital and/or 30-day where follow-up exists.
+
+## Secondary
+
+1. Length of stay and readmission.
+2. **Method performance** — accuracy/completeness of chart extraction vs human reference (subset).
+3. **Plan quality** — structured review of AI-drafted suggestions against guideline criteria (no autonomous use in care).
+
+Exact definitions and codes will be fixed in the statistical analysis plan after the literature review.
+
+# AI processing boundary
+
+- AI and agents are **assistive only**. A licensed clinician remains accountable for any clinical decision.
+- I will not deploy autonomous patient-facing or clinician-facing decision support in care during this phase.
+- Identifiable chart text stays in approved environments. External APIs (e.g. OpenRouter) only with explicit approval and contractual controls; prefer local open-weight models for identifiable data where feasible.
+- I will log prompts, model versions, and outputs as allowed by ethics and the data controller.
+- I will disclose AI-assisted writing and research methods (see `docs/ai-transparency.md` and the attribution ledger).
+
+# Sign-off
+
+| Role | Name | Date | Status |
+|------|------|------|--------|
+| Responsible researcher | Martin Gerdin | | Pending |
+
+When signed, I will reference this document from `research-plan-umbrella.qmd` and `research-plan-detailed.qmd`.
+
+# References
+
+- `docs/plan-research-documents.qmd`
+- `docs/two-research-plans.md`
+- `docs/ethix/ethix-template.md`
+- GitHub issue #2
