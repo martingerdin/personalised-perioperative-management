@@ -270,11 +270,11 @@ I will cite the current weighted total in the umbrella plan and Ethix AI-disclos
 flowchart TD
   A[Research questions] --> B[Search and screen]
   B --> C[project.bib]
-  C --> D[Literature review Quarto]
+  B --> D[Literature review Quarto]
+  D --> F1[Umbrella research plan]
   A --> E[Design choice SPIROS or SPIRIT]
-  E --> F1[Umbrella research plan]
+  E --> F1
   E --> F2[Detailed research plan]
-  D --> F1
   F1 --> G[Ethics application Ethix draft]
   F2 --> F1
   C --> G
@@ -352,12 +352,12 @@ I will disclose AI assistance in the protocol (SPIROS item on AI-assisted techno
 |------|------|--------|
 | 0 | Confirm primary design and data access route | One-page design note |
 | 1 | Quarto, BibTeX, dual-plan stubs, AI ledger | Repo scaffold |
-| 2 | Draft umbrella plan bounds for Ethix | `research-plan-umbrella.qmd` |
-| 3 | Draft detailed plan inside those bounds | `research-plan-detailed.qmd` |
-| 4 | Build search strategy and bibliography | `project.bib` |
-| 5 | Screen and theme evidence | Screening table |
-| 6 | Draft short literature review | `literature-review.qmd` |
-| 7 | Draft Ethix answers from umbrella plan | `ethics-application.qmd` |
+| 2 | Build search strategy and bibliography | `project.bib` |
+| 3 | Screen and theme evidence | Screening table |
+| 4 | Draft short literature review | `literature-review.qmd` |
+| 5 | Draft umbrella plan bounds for Ethix (informed by review) | `research-plan-umbrella.qmd` |
+| 6 | Draft detailed plan inside those bounds | `research-plan-detailed.qmd` |
+| 7 | Draft Ethix answers from umbrella plan + literature | `ethics-application.qmd` |
 | 8 | Consistency pass: detailed ⊆ umbrella; AI ledger refreshed | Issue list closed |
 | 9 | External review | Revised PDFs |
 | 10 | Submit Ethix; register if required | Submission pack |
@@ -381,11 +381,12 @@ Track as GitHub issues (`scripts/create_github_issues.sh`).
 
 1. Write a one-page design note: population, data source, observational vs interventional, primary outcome
 2. ~~Obtain Ethix template~~ → converted to `docs/ethix/ethix-template.md`
-3. Fill umbrella plan bounds first, then detailed-plan content
-4. Expand `project.bib` and run searches
-5. Complete SPIROS checklist against the umbrella plan
-6. Draft Ethix-aligned Swedish answers (see field map)
-7. Keep `AI-Written-Pct` on every commit and refresh the ledger
+3. Search, screen, and draft literature review **before** umbrella plan
+4. Draft umbrella plan using review for rationale and gap
+5. Draft detailed plan inside umbrella bounds
+6. Complete SPIROS checklist against the umbrella plan
+7. Draft Ethix-aligned Swedish answers (see field map)
+8. Keep `AI-Written-Pct` on every commit and refresh the ledger
 
 # Key references to seed early
 

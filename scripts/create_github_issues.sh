@@ -53,6 +53,10 @@ create "Draft umbrella research plan for Ethix" "$(cat <<'EOF'
 ## Goal
 Draft the stable, broad protocol annexed to the Ethix Grundansökan.
 
+## Depends on
+- #2 Design note (scope)
+- #7 Literature review (rationale, gap, background)
+
 ## Deliverable
 `docs/research-plan-umbrella.qmd` — SPIROS-aligned, Swedish where required for annex.
 
@@ -93,6 +97,9 @@ Write the living internal plan that guides day-to-day research work.
 ## Rule
 Stay **inside** umbrella bounds. Flag anything that would need an Ethix ändringsansökan.
 
+## Depends on
+- #3 Umbrella research plan
+
 ## Acceptance
 - [ ] Every workstream maps to an umbrella aim
 - [ ] No wider population, data route, or purpose than umbrella plan
@@ -106,6 +113,9 @@ EOF
 create "Build search strategy and seed bibliography" "$(cat <<'EOF'
 ## Goal
 Set up systematic search and expand `references/project.bib`.
+
+## Depends on
+- #2 Design note (scope for search strings)
 
 ## Deliverables
 - Search strings in `scripts/README.md` (refined for PubMed/Scopus syntax)
@@ -183,6 +193,7 @@ Draft Swedish paste-ready answers for Ethix sections 3–6.
 
 ## Must align with
 - Umbrella research plan (not detailed-only details that widen scope)
+- Literature review (#7) for §3 background
 
 ## References
 - `docs/ethix/ethix-template.md`
