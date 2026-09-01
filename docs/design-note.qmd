@@ -17,61 +17,79 @@ I lock scope here before the literature review, umbrella plan, and Ethix applica
 
 # Population and setting
 
-- **Population:** Adults (≥18 years) who undergo planned surgery under anaesthesia in Sweden.
-- **Setting:** Swedish hospital perioperative and anaesthesia care. Mixed surgical categories (aligning with the ICD-10 groups in the Ethix draft).
+- **Population:** Adults (≥18 years) who undergo planned surgery under anaesthesia.
+- **Setting:** **Karolinska University Hospital** — perioperative and anaesthesia care. Mixed surgical categories (aligning with the ICD-10 groups in the Ethix draft).
 - **Unit of analysis:** The surgical episode and linked preoperative assessment period, unless a sub-study states otherwise.
 - **Inclusion (working):** Patients with sufficient chart and structured perioperative data for the planned analyses.
 - **Exclusion (working):** Episodes with no usable preoperative record or missing outcome linkage.
 
-**Open:** Exact hospital(s)/region(s) and final inclusion rules after data access is confirmed.
+**Open:** Final inclusion rules after data access is confirmed with the hospital.
 
 # Data sources and access
 
 | Source | Content | Role |
 |--------|---------|------|
-| Electronic health records (journal) | History, examination notes, assessments, comorbidity | Chart review; AI-assisted extraction in controlled environment |
-| Structured perioperative data | Anaesthesia records, surgery codes, timings, labs where available | Variables and outcomes |
-| Registers (as approved) | Outcomes, diagnoses, mortality, readmission | Validation and follow-up |
+| Karolinska EHR (journal) | History, examination notes, assessments, comorbidity | Chart review; AI-assisted extraction in controlled environment |
+| Structured perioperative data (Karolinska) | Anaesthesia records, surgery codes, timings, labs where available | Exposures, covariates, outcomes |
+| Registers (as approved) | Outcomes, diagnoses, mortality, readmission | Validation and follow-up beyond index admission |
 
-- **Access route (to confirm):** Research agreement with data controller(s); register extracts via approved pathways (e.g. regional database, SWEDEPOR/Surgery/quality registers where applicable).
+- **Access route (to confirm):** Research agreement with Karolinska Universitetssjukhuset / relevant data controller; register extracts via approved pathways where needed.
 - **Ethix alignment:** Register and journal data (`§10.1`); sensitive health data; no direct participant contact in the current Ethix draft (`§9.1` Nej).
 
-**Open:** Named registers, legal basis for each source, and data processor agreements.
+**Open:** Named supplementary registers, legal basis for each source, and data processor agreements.
 
 # Design
 
 | Track | Guideline | Status |
 |-------|-----------|--------|
-| **Primary:** Observational chart-based study | SPIROS | In scope for ethics application and first analyses |
-| **Contingent:** Trial of AI-supported vs usual preoperative pathway | SPIRIT 2025 | Not started; separate protocol and amendment if pursued |
+| **Primary:** Observational study at Karolinska | SPIROS | In scope for ethics application |
+| **Contingent:** Trial of AI-supported vs usual pathway in care | SPIRIT 2025 | Not started; separate protocol and amendment if pursued |
 
-**Primary design elements:**
+This project has **two parallel workstreams**. Both use the same data boundary and AI rules below. They differ in question and evaluation method.
 
-- Retrospective and/or prospective observational cohort using routinely collected data.
-- Development and evaluation of AI-assisted methods to structure preoperative fitness signals and draft management suggestions.
-- Association analyses between patient-level variables and perioperative outcomes.
-- No change to clinical care solely because of this research phase.
+## Workstream A — Epidemiological associations
 
-# Outcome families
+Standard observational research:
 
-## Primary (for association and feasibility work)
+- Estimate associations between patient-level factors (demographics, comorbidity, functional status, investigation results, chart-derived signals) and perioperative outcomes.
+- Retrospective and/or prospective cohort using routinely collected Karolinska data.
+- No change to clinical care solely because of this workstream.
 
-1. **Major perioperative morbidity** — composite or domain-specific (cardiac, pulmonary, renal, infectious, bleeding) as data allow.
-2. **Critical care escalation** — unplanned ICU/HDU admission or equivalent.
-3. **Mortality** — in-hospital and/or 30-day where follow-up exists.
+## Workstream B — Agentic anaesthesia planning (in-vitro)
 
-## Secondary
+Development and **in-vitro** evaluation of AI agents that draft:
 
-1. Length of stay and readmission.
-2. **Method performance** — accuracy/completeness of chart extraction vs human reference (subset).
-3. **Plan quality** — structured review of AI-drafted suggestions against guideline criteria (no autonomous use in care).
+1. **Pre-operative** anaesthesia and perioperative management plans from chart and structured data.
+2. **Intra-operative** anaesthesia plans (where data and use case allow).
 
-Exact definitions and codes will be fixed in the statistical analysis plan after the literature review.
+Evaluation is **off-line**: compare agent outputs to documentation, guidelines, and clinician review. No autonomous use in live care during this phase.
+
+# Outcomes to explore
+
+I will consider **multiple outcomes** without ranking them as primary or secondary at this stage. The literature review and data availability will guide which outcomes enter each analysis.
+
+**Candidate outcome domains:**
+
+- Major perioperative morbidity (domain-specific or **composite**)
+- Critical care escalation (unplanned ICU/HDU or equivalent)
+- Mortality (in-hospital and/or fixed horizon where follow-up exists)
+- Length of stay and readmission
+- Procedure-specific complications where counts allow
+
+**Composite outcomes:** I will define composites explicitly when used (component events, window, handling of competing events). I will not pre-specify a single primary composite here.
+
+**In-vitro evaluation metrics** (workstream B, not patient outcomes):
+
+- Completeness and accuracy of chart extraction vs human reference (subset)
+- Plan quality against guideline and documentation criteria
+- Consistency and safety flags on agent-drafted pre-operative and intra-operative plans
+
+Exact definitions, codes, and analysis hierarchy will be fixed in the statistical analysis plan after the literature review.
 
 # AI processing boundary
 
 - AI and agents are **assistive only**. A licensed clinician remains accountable for any clinical decision.
-- I will not deploy autonomous patient-facing or clinician-facing decision support in care during this phase.
+- Workstream B produces draft plans for research evaluation only. I will not deploy them in live care during this phase.
 - Identifiable chart text stays in approved environments. External APIs (e.g. OpenRouter) only with explicit approval and contractual controls; prefer local open-weight models for identifiable data where feasible.
 - I will log prompts, model versions, and outputs as allowed by ethics and the data controller.
 - I will disclose AI-assisted writing and research methods (see `docs/ai-transparency.md` and the attribution ledger).
